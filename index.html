@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>StarBucks</title>
+</head>
+
+<body>
+    <div class="circulo" aria-hidden="true"></div>
+
+    <img class="logo" src="img/logo.png" alt="Starbucks logo" width="80" height="80" />
+
+    <main class="contenido">
+        <section class="cuadro-texto">
+            <h2>It's not just Coffee It's <span>Starbucks</span></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, non voluptas suscipit fugit nemo
+                nobis qui amet!</p>
+            <button type="button" class="buy-btn">Click me to buy a coffee</button>
+        </section>
+
+        <section class="cuadro-imagen">
+            <img src="img/img1.png"
+                sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="Starbucks coffee cup"
+                class="starbucks-img" loading="lazy" width="340" height="auto" />
+        </section>
+    </main>
+
+    <nav class="menu" aria-label="Theme and image selection">
+        <button type="button" aria-label="Green theme" onclick="cambiarColor('#017143'); cambiarImagen('img/img1.png')">
+            <img src="img/thumb1.png" alt="Green theme thumbnail" />
+        </button>
+        <button type="button" aria-label="Pink theme" onclick="cambiarColor('#eb7495'); cambiarImagen('img/img2.png')">
+            <img src="img/thumb2.png" alt="Pink theme thumbnail" />
+        </button>
+        <button type="button" aria-label="Purple theme"
+            onclick="cambiarColor('#d752b1'); cambiarImagen('img/img3.png')">
+            <img src="img/thumb3.png" alt="Purple theme thumbnail" />
+        </button>
+    </nav>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

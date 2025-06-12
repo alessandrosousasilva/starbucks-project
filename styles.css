@@ -1,0 +1,200 @@
+:root {
+  --primary-color: #017143;
+  --primary-hover: #00ac64;
+  --text-color: #333333;
+  --background-circle: #017143;
+  --font-main: "Poppins", sans-serif;
+  --transition-speed: 0.4s;
+}
+
+/* Reset e base mobile-first */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px para facilitar cálculo */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  padding: 1.6rem 2vw;
+  background: #fff;
+  color: var(--text-color);
+  min-height: 100vh;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem auto;
+  width: 8rem; /* 80px */
+  height: auto;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cuadro-texto {
+  max-width: 600px;
+  text-align: center;
+}
+
+.cuadro-texto button:hover,
+.cuadro-texto button:focus {
+  background-color: var(--primary-hover);
+  outline: none;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 3.6rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+h2 span {
+  color: var(--primary-color);
+}
+
+p {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.buy-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+  outline-offset: 4px;
+}
+
+.buy-btn:hover,
+.buy-btn:focus {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(1, 113, 67, 0.2);
+  outline: none;
+}
+
+.cuadro-imagen {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.starbucks-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: opacity 0.4s ease;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 3px;
+  transition: transform 0.3s ease;
+}
+
+.menu button:focus-visible,
+.menu button:hover {
+  transform: translateY(-10px) scale(1.1);
+  outline: 2px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.menu img {
+  width: 6rem; /* 60px */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Circulo de fundo */
+.circulo {
+  background: var(--background-circle);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  clip-path: circle(600px at right 800px);
+  z-index: -1;
+  pointer-events: none;
+  transition: background-color var(--transition-speed);
+}
+
+/* Responsividade para tablets e desktops */
+@media (min-width: 900px) {
+  .contenido {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .cuadro-texto {
+    text-align: left;
+  }
+
+  .cuadro-imagen {
+    justify-content: flex-end;
+  }
+
+  .circulo {
+    clip-path: circle(600px at right 800px);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 2vw;
+  }
+
+  .logo {
+    width: 6rem;
+  }
+
+  .circulo {
+    clip-path: circle(200px at right 100px);
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .starbucks-img {
+    max-width: 220px;
+  }
+}
