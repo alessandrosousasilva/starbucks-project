@@ -10,6 +10,12 @@ Projeto de página web inspirada na identidade visual da Starbucks, desenvolvido
 
 ---
 
+## Teste o projeto
+
+https://alessandrosousasilva.github.io/starbucks-project/
+
+---
+
 ## Sobre o Projeto
 
 Este site foi construído utilizando **HTML5**, **CSS3** e **JavaScript**, com foco em:
